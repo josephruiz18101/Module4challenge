@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./css/style.css"> <!-- Correct way to link CSS -->
+</head>
+<div class="t-shape"></div>
+    <div class="horizontal-line"></div>
+    <div class="vertical-line"></div>
+</div>
+<body>
+    <button class="bgbtn" onclick="toggleBackgroundColor()">🌞</button>
+    <script>
+        let isBlack = false; // Variable to track the current background color
+
+        function toggleBackgroundColor() {
+            if (isBlack) {
+                document.body.style.backgroundColor = 'white'; // Change to white
+                document.body.style.color = 'black'; // Change text color to black
+            } else {
+                document.body.style.backgroundColor = 'black'; // Change to black
+                document.body.style.color = 'white'; // Change text color to white
+            }
+            isBlack = !isBlack; // Toggle the state
+        }
+    </script>
+    <div class="image-container"></div>
+    <img id="notebook" src="./images/notebookimg.jpg" alt="notebook">
+    <div class="text-overlay">My First Blog</div>
+</div>
+<div id="form-container">
+<form id="form">
+    <lable for="name">Name:</lable>
+    <input type="text" name="name" id="name">
+<p></p>
+    <lable for="title">Title:</lable>
+    <input type="text" name="title" id="title">
+<p></p>
+    <lable for="post">post:</lable>
+    <textarea name="Post" id="post" rows="10"></textarea>
+<p></p>
+    <button type="submit" id="submitBtn">submit</button>
+</form>
+</div>
+<script src="./js/logic.js"></script>
+</body>
+
+</html>
