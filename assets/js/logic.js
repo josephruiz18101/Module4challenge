@@ -1,20 +1,19 @@
-const Form = document.querySelector("#form")
-
-form.addEventListener("submit",(event) => {
+const form = document.querySelector("#form");
+form.addEventListener("submit", (event) => {
   event.preventDefault();
-const name = document.querySelector("#name"); 
- const title = document.querySelector("#title");
- const post = document.querySelector("#post");
-window.location.href = "blog.html"
-
-});
-// save name,title, post to an object
-const allData = {
-    name: name.value,
+  const username = document.querySelector("#name");
+  const title = document.querySelector("#title");
+  const post = document.querySelector("#post");
+  const allData = {
+    username: username.value,
     title: title.value,
     post: post.value,
-};
-// json stringify allData
-//save name,title,post to local storage
-localStorage.setItem("allData",JSON.stringify(allData));
-
+  };
+  const strFromLocalStorage = localStorage.getItem("allData");
+  const jsPrevPosts = [];
+  //const jsPrevPosts = JSON.parse(strFromLocalStorage) || [];
+  jsPrevPosts.push(allData);
+  let blogString = JSON.stringify(jsPrevPosts);
+  localStorage.setItem("allData", JSON.stringify(allData));
+  window.location.href = "blog.html";
+});
