@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./assets/css/style.css"> <!-- Correct way to link CSS -->
+</head>
+<div class="t-shape"></div>
+    <div class="horizontal-line"></div>
+    <div class="vertical-line"></div>
+</div>
+<body>
+    <div id="form-container">
+        <form id="form">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required>
+          <p></p>
+          <label for="title">Title:</label>
+          <input type="text" name="title" id="title" required>
+          <p></p>
+          <label for="post">Post:</label>
+          <textarea name="post" id="post" row="10" required></textarea>
+          <p></p>
+          <button type="submit" id="submitBtn">Submit</button>
+        </form>
+      </div>
+      <script src="./assets/js/logic.js"></script>
+    <button class="bgbtn" onclick="toggleBackgroundColor()">🌞</button>
+    <script>
+        let isBlack = false; // Variable to track the current background color
+
+        function toggleBackgroundColor() {
+            if (isBlack) {
+                document.body.style.backgroundColor = 'white'; // Change to white
+                document.body.style.color = 'black'; // Change text color to black
+            } else {
+                document.body.style.backgroundColor = 'black'; // Change to black
+                document.body.style.color = 'white'; // Change text color to white
+            }
+            isBlack = !isBlack; // Toggle the state
+        }
+    </script>
+    <div class="image-container"></div>
+    <img id="notebook" src="./assets/images/notebookimg.jpg" alt="notebook">
+    <div class="text-overlay">My First Blog</div>
+</div>
+
+</body>
+
+</html>
